@@ -57,6 +57,13 @@ Config.prototype._seed = function _seed(seed) {
     // All config names should be camel-cased.
     seedOrDefault('TEST_KEY', 100); // never remove, tests and lives depend on it
     seedOrDefault('autoGossip', true);
+    seedOrDefault('dampedErrorLoggingEnabled', false);
+    seedOrDefault('dampedMaxPercentage', 10);
+    seedOrDefault('dampedMemberExpirationInterval', 60000);
+    seedOrDefault('dampPendingLimit', 5);
+    seedOrDefault('dampPendingBacklogMax', 10);
+    seedOrDefault('dampReqNVal', 6);
+    seedOrDefault('dampReqRVal', 3);
     seedOrDefault('dampScoringEnabled', true);
     seedOrDefault('dampScoringDecayEnabled', true);
     seedOrDefault('dampScoringDecayInterval', 1000);
@@ -69,6 +76,7 @@ Config.prototype._seed = function _seed(seed) {
     seedOrDefault('dampScoringReuseLimit', 2500);
     seedOrDefault('dampScoringSuppressDuration', 60 * 60 * 1000); // 1 hr in ms
     seedOrDefault('dampScoringSuppressLimit', 5000);
+    seedOrDefault('dampTimerInterval', 1000);
     seedOrDefault('memberBlacklist', [], function validator(vals) {
         return _.all(vals, function all(val) {
             return val instanceof RegExp;

@@ -40,7 +40,7 @@ var hammock = require('uber-hammock');
 var metrics = require('metrics');
 var packageJSON = require('./package.json');
 
-var Gossip = require('./lib/gossip');
+var createGossip = require('./lib/gossip');
 var Suspicion = require('./lib/gossip/suspicion');
 
 var Config = require('./config.js');
@@ -136,7 +136,7 @@ function RingPop(options) {
 
     this.membership = initMembership(this);
     this.memberIterator = new MembershipIterator(this);
-    this.gossip = new Gossip({
+    this.gossip = createGossip({
         ringpop: this,
         minProtocolPeriod: options.minProtocolPeriod
     });
