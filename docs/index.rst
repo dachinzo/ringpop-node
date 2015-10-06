@@ -11,6 +11,7 @@ To find out more, head to the Getting Started section below.
    getting_started
    running_ringpop
    programming_ringpop
+   event_tracing
    architecture_design
    references
    community
