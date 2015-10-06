@@ -60,8 +60,6 @@ Config.prototype._seed = function _seed(seed) {
     seedOrDefault('dampedErrorLoggingEnabled', false);
     seedOrDefault('dampedMaxPercentage', 10);
     seedOrDefault('dampedMemberExpirationInterval', 60000);
-    seedOrDefault('dampPendingLimit', 5);
-    seedOrDefault('dampPendingBacklogMax', 10);
     seedOrDefault('dampReqNVal', 6);
     seedOrDefault('dampReqRVal', 3);
     seedOrDefault('dampScoringEnabled', true);
