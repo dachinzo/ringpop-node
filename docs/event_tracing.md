@@ -19,3 +19,10 @@ The command should return a result of `OK`. (The ringpop member @ 8200 may emit 
 
 Now you should have all membership checksum updates log to the tcat window. To test it, kill a ringpop member NOT at port 8200. That should generate a message. Restart it. That should also generate a message.
 
+My output looked like:
+```
+[benfleis] ~/src/ringpop/node $ ~/src/tcurl/tcat.js -p localhost:4444 ringpop foobar
+{"id":"127.0.0.1:8200","address":"127.0.0.1:8200","timestamp":1444129621728,"checksum":107935330,"membershipStatusCounts":{"alive":1,"faulty":0,"leave":0,"suspect":1}}
+{"id":"127.0.0.1:8200","address":"127.0.0.1:8200","timestamp":1444129623663,"checksum":1332854908,"membershipStatusCounts":{"alive":2,"faulty":0,"leave":0,"suspect":0}}
+```
+
